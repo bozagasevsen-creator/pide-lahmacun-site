@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pide Lahmacun Fırını</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pidehane Adıyaman</title>
 
   <style>
     *{
@@ -14,27 +14,27 @@
     body{
       margin:0;
       font-family:Arial, sans-serif;
-      background:#f7f0df;
-      color:#233126;
+      background:#fff8e8;
+      color:#243b2f;
     }
 
     nav{
       position:sticky;
       top:0;
-      z-index:10;
-      background:#183b2b;
-      color:white;
+      z-index:100;
+      background:#214b35;
+      padding:15px 8%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:15px 8%;
-      box-shadow:0 3px 12px rgba(0,0,0,0.18);
+      box-shadow:0 4px 15px rgba(0,0,0,0.15);
     }
 
-    nav h2{
-      margin:0;
-      font-size:22px;
-      color:#f3d58b;
+    nav img{
+      height:45px;
+      background:white;
+      padding:5px 10px;
+      border-radius:12px;
     }
 
     nav a{
@@ -42,152 +42,174 @@
       text-decoration:none;
       margin-left:18px;
       font-weight:bold;
-      font-size:15px;
     }
 
     .hero{
       min-height:85vh;
-      background:linear-gradient(rgba(24,59,43,0.82), rgba(24,59,43,0.82)),
-      url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1400&q=80');
+      background:
+      linear-gradient(rgba(33,75,53,0.65),rgba(33,75,53,0.65)),
+      url("images/front.jpg");
       background-size:cover;
       background-position:center;
-      color:white;
       display:flex;
       align-items:center;
-      padding:60px 8%;
+      padding:70px 8%;
+      color:white;
     }
 
-    .hero-content{
+    .hero-box{
       max-width:650px;
+      background:rgba(0,0,0,0.25);
+      padding:35px;
+      border-radius:25px;
     }
 
-    .hero h1{
-      font-size:56px;
-      margin:0 0 15px;
-      color:#f3d58b;
+    .hero-box h1{
+      font-size:55px;
+      margin:0;
+      color:#ffd66b;
     }
 
-    .hero p{
+    .hero-box p{
       font-size:21px;
       line-height:1.6;
     }
 
     .btn{
       display:inline-block;
-      background:#f3d58b;
-      color:#183b2b;
+      margin:10px 8px 0 0;
       padding:14px 22px;
       border-radius:30px;
+      background:#ffd66b;
+      color:#214b35;
       text-decoration:none;
       font-weight:bold;
-      margin:10px 10px 0 0;
     }
 
-    .btn.secondary{
+    .btn.white{
       background:white;
     }
 
     section{
-      padding:60px 8%;
+      padding:65px 8%;
     }
 
-    .section-title{
+    .title{
       text-align:center;
-      font-size:34px;
-      color:#183b2b;
+      font-size:36px;
+      color:#214b35;
       margin-bottom:35px;
     }
 
     .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:25px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .about-text{
       background:white;
-      border-radius:22px;
-      padding:35px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+      padding:30px;
+      border-radius:25px;
       line-height:1.8;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
       font-size:18px;
     }
 
     .menu-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:22px;
     }
 
-    .menu-card{
+    .card{
       background:white;
-      padding:22px;
-      border-radius:20px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.08);
-      border-top:5px solid #183b2b;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      transition:0.3s;
     }
 
-    .menu-card h3{
-      margin:0 0 10px;
-      color:#183b2b;
-      font-size:22px;
+    .card:hover{
+      transform:translateY(-6px);
     }
 
-    .menu-card p{
-      color:#666;
-      min-height:45px;
+    .card img{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:18px;
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      color:#214b35;
     }
 
     .price{
-      display:block;
-      margin-top:15px;
+      color:#c88b25;
       font-size:20px;
       font-weight:bold;
-      color:#b9822b;
     }
 
     .gallery{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
       gap:18px;
     }
 
     .gallery img{
       width:100%;
-      height:230px;
+      height:220px;
       object-fit:cover;
       border-radius:20px;
       box-shadow:0 8px 20px rgba(0,0,0,0.12);
     }
 
-    .info-box{
+    .contact{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
       gap:20px;
     }
 
     .info{
-      background:#183b2b;
+      background:#214b35;
       color:white;
       padding:25px;
-      border-radius:20px;
+      border-radius:22px;
       text-align:center;
     }
 
     .info h3{
-      color:#f3d58b;
+      color:#ffd66b;
     }
 
     iframe{
       width:100%;
       height:350px;
       border:0;
-      border-radius:22px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.12);
+      border-radius:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
     }
 
     footer{
-      background:#183b2b;
+      background:#214b35;
       color:white;
       text-align:center;
       padding:25px;
     }
 
-    .whatsapp-fixed{
+    .whatsapp{
       position:fixed;
       right:20px;
       bottom:20px;
@@ -197,13 +219,13 @@
       border-radius:50px;
       text-decoration:none;
       font-weight:bold;
-      box-shadow:0 6px 20px rgba(0,0,0,0.25);
+      box-shadow:0 8px 25px rgba(0,0,0,0.25);
     }
 
-    @media(max-width:700px){
+    @media(max-width:750px){
       nav{
         flex-direction:column;
-        gap:10px;
+        gap:12px;
       }
 
       nav a{
@@ -211,123 +233,172 @@
         font-size:14px;
       }
 
-      .hero h1{
+      .hero-box h1{
         font-size:38px;
       }
 
-      .hero p{
-        font-size:18px;
+      .about{
+        grid-template-columns:1fr;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <nav>
-    <h2>Pide Lahmacun Fırını</h2>
-    <div>
-      <a href="#anasayfa">Ana Sayfa</a>
-      <a href="#menu">Menü</a>
-      <a href="#galeri">Fotoğraflar</a>
-      <a href="#konum">Konum</a>
-      <a href="#iletisim">İletişim</a>
-    </div>
-  </nav>
+<nav>
+  <img src="images/logo.jpg" alt="Pidehane Logo">
+  <div>
+    <a href="#home">Ana Sayfa</a>
+    <a href="#menu">Menü</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#iletisim">İletişim</a>
+  </div>
+</nav>
 
-  <header class="hero" id="anasayfa">
-    <div class="hero-content">
-      <h1>Sıcacık Fırın Lezzetleri</h1>
-      <p>
-        Günlük taze hamurla hazırlanan lahmacun, pide, pizza, ekmek ve fırın ürünleri.
-        Lezzeti yerinde tatmak veya sipariş vermek için hemen bize ulaşın.
-      </p>
-      <a class="btn" href="tel:+905551112233">Hemen Ara</a>
-      <a class="btn secondary" href="https://wa.me/905551112233" target="_blank">WhatsApp Sipariş</a>
-    </div>
-  </header>
+<header class="hero" id="home">
+  <div class="hero-box">
+    <h1>Pidehane</h1>
+    <p>Adıyaman’da sıcak pide, lahmacun, pizza ve fırın lezzetleri.</p>
+    <a class="btn" href="tel:+905444970439">Hemen Ara</a>
+    <a class="btn white" href="https://wa.me/905444970439" target="_blank">WhatsApp</a>
+  </div>
+</header>
 
-  <section>
-    <h2 class="section-title">Hakkımızda</h2>
-    <div class="about">
-      Pide Lahmacun Fırını olarak Adıyaman Altınşehir’de günlük taze ve sıcak ürünler sunuyoruz.
-      Lahmacun, kıymalı pide, yumurtalı pide, kavurmalı yumurtalı pide, pizza ve ekmek çeşitleriyle
-      müşterilerimize temiz, hızlı ve lezzetli hizmet vermeyi amaçlıyoruz.
+<section>
+  <h2 class="title">Hakkımızda</h2>
+  <div class="about">
+    <img src="images/front.jpg" alt="Pidehane">
+    <div class="about-text">
+      Pidehane olarak Adıyaman Altınşehir’de günlük taze malzemelerle hazırlanan pide,
+      lahmacun, pizza ve özel fırın lezzetlerini müşterilerimize sıcak ve lezzetli şekilde sunuyoruz.
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="menu">
-    <h2 class="section-title">Menü</h2>
-    <div class="menu-grid">
-      <div class="menu-card">
+<section id="menu">
+  <h2 class="title">Menü</h2>
+
+  <div class="menu-grid">
+
+    <div class="card">
+      <img src="images/lahmacun.jpg">
+      <div class="card-content">
         <h3>Lahmacun</h3>
-        <p>İnce hamur, özel kıyma harcı ve günlük taze malzemeler.</p>
-        <span class="price">70 TL</span>
-      </div>
-      <div class="menu-card">
-        <h3>Kıymalı Pide</h3>
-        <p>Taş fırında pişen lezzetli kıymalı pide.</p>
-        <span class="price">130 TL</span>
-      </div>
-      <div class="menu-card">
-        <h3>Yumurtalı Pide</h3>
-        <p>Sıcak pide üzerinde yumurta lezzeti.</p>
-        <span class="price">120 TL</span>
-      </div>
-      <div class="menu-card">
-        <h3>Kavurmalı Yumurtalı Pide</h3>
-        <p>Kavurma ve yumurtanın fırından çıkan özel uyumu.</p>
-        <span class="price">170 TL</span>
-      </div>
-      <div class="menu-card">
-        <h3>Pizza</h3>
-        <p>Bol malzemeli, sıcak ve doyurucu fırın pizzası.</p>
-        <span class="price">150 TL</span>
-      </div>
-      <div class="menu-card">
-        <h3>Ekmek</h3>
-        <p>Günlük taze ve sıcak fırın ekmeği.</p>
-        <span class="price">10 TL</span>
+        <p>İnce hamur, özel iç harç.</p>
+        <span class="price">Fiyat sorunuz</span>
       </div>
     </div>
-  </section>
 
-  <section id="galeri">
-    <h2 class="section-title">Fotoğraflar</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1601924582975-7f9e2caa4e8c?auto=format&fit=crop&w=900&q=80" alt="Pizza">
-      <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=900&q=80" alt="Fırın pizza">
-      <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&q=80" alt="Fırın ürünleri">
-    </div>
-  </section>
-
-  <section id="iletisim">
-    <h2 class="section-title">İletişim</h2>
-    <div class="info-box">
-      <div class="info">
-        <h3>Telefon</h3>
-        <p>+90 555 111 22 33</p>
-      </div>
-      <div class="info">
-        <h3>Adres</h3>
-        <p>Altınşehir Mahallesi, Adıyaman Merkez</p>
-      </div>
-      <div class="info">
-        <h3>Çalışma Saatleri</h3>
-        <p>09:00 - 23:00</p>
+    <div class="card">
+      <img src="images/kasarli-pide.jpg">
+      <div class="card-content">
+        <h3>Kaşarlı Pide</h3>
+        <p>Bol kaşarlı sıcak pide.</p>
+        <span class="price">Fiyat sorunuz</span>
       </div>
     </div>
-  </section>
 
-  <section id="konum">
-    <h2 class="section-title">Konum</h2>
-    <iframe src="https://www.google.com/maps?q=Alt%C4%B1n%C5%9Fehir%20Ad%C4%B1yaman&output=embed" loading="lazy"></iframe>
-  </section>
+    <div class="card">
+      <img src="images/kavurmali-pide.jpg">
+      <div class="card-content">
+        <h3>Kavurmalı Pide</h3>
+        <p>Lezzetli kavurma ile hazırlanır.</p>
+        <span class="price">Fiyat sorunuz</span>
+      </div>
+    </div>
 
-  <footer>
-    <p>© 2026 Pide Lahmacun Fırını | Tüm hakları saklıdır</p>
-  </footer>
+    <div class="card">
+      <img src="images/kavurmali-kasarli-pide.jpg">
+      <div class="card-content">
+        <h3>Kavurmalı Kaşarlı Pide</h3>
+        <p>Kavurma ve kaşarın özel uyumu.</p>
+        <span class="price">Fiyat sorunuz</span>
+      </div>
+    </div>
 
-  <a class="whatsapp-fixed" href="https://wa.me/905551112233" target="_blank">WhatsApp</a>
+    <div class="card">
+      <img src="images/karisik-pizza.jpg">
+      <div class="card-content">
+        <h3>Karışık Pizza</h3>
+        <p>Bol malzemeli pizza.</p>
+        <span class="price">Fiyat sorunuz</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/cigkofte.jpg">
+      <div class="card-content">
+        <h3>Çiğ Köfte</h3>
+        <p>Servis tabağı ile.</p>
+        <span class="price">Fiyat sorunuz</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/kizarmis-patates.jpg">
+      <div class="card-content">
+        <h3>Kızarmış Patates</h3>
+        <p>Sıcak ve çıtır.</p>
+        <span class="price">Fiyat sorunuz</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/kola.jpg">
+      <div class="card-content">
+        <h3>Kola</h3>
+        <p>Soğuk içecek.</p>
+        <span class="price">Fiyat sorunuz</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="galeri">
+  <h2 class="title">Galeri</h2>
+  <div class="gallery">
+    <img src="images/front.jpg">
+    <img src="images/lahmacun.jpg">
+    <img src="images/kasarli-pide.jpg">
+    <img src="images/kavurmali-pide.jpg">
+    <img src="images/karisik-pizza.jpg">
+    <img src="images/cigkofte.jpg">
+  </div>
+</section>
+
+<section id="iletisim">
+  <h2 class="title">İletişim</h2>
+
+  <div class="contact">
+    <div class="info">
+      <h3>Telefon</h3>
+      <p>0544 497 04 39</p>
+    </div>
+
+    <div class="info">
+      <h3>Adres</h3>
+      <p>Altınşehir, 3048. Sk. No:10E, Adıyaman Merkez</p>
+    </div>
+
+    <div class="info">
+      <h3>Çalışma Saatleri</h3>
+      <p>10:00 - 22:00</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Konum</h2>
+  <iframe src="https://www.google.com/maps?q=Pidehane%20Ad%C4%B1yaman&output=embed"></iframe>
+</section>
+
+<footer>
+  <p>© 2026 Pidehane Adıyaman | Web sayfası tasarımı</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/905444970439" target="_blank">WhatsApp</a>
 
 </body>
 </html>
