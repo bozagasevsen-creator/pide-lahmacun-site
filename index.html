@@ -6,240 +6,86 @@
   <title>Pidehane Adıyaman</title>
 
   <style>
-    *{
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:#fff8e8;
-      color:#243b2f;
-    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,sans-serif;background:#fff8e8;color:#243b2f}
 
     nav{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:#214b35;
-      padding:15px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      box-shadow:0 4px 15px rgba(0,0,0,0.15);
+      position:sticky;top:0;z-index:100;background:#214b35;
+      padding:15px 8%;display:flex;justify-content:space-between;
+      align-items:center;box-shadow:0 4px 15px rgba(0,0,0,.15)
     }
-
-    nav img{
-      height:70px;
-      background:white;
-      padding:5px 10px;
-      border-radius:12px;
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:18px;
-      font-weight:bold;
-    }
+    nav img{height:70px;background:white;padding:5px 10px;border-radius:12px}
+    nav a{color:white;text-decoration:none;margin-left:18px;font-weight:bold}
 
     .hero{
       min-height:85vh;
-      background:
-      linear-gradient(rgba(33,75,53,0.65),rgba(33,75,53,0.65)),
-      url("images/front.jpg");
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      align-items:center;
-      padding:70px 8%;
-      color:white;
+      background:linear-gradient(rgba(33,75,53,.65),rgba(33,75,53,.65)),url("images/front.jpg");
+      background-size:cover;background-position:center;display:flex;align-items:center;
+      padding:70px 8%;color:white
     }
-
-    .hero-box{
-      max-width:650px;
-      background:rgba(0,0,0,0.25);
-      padding:35px;
-      border-radius:25px;
-    }
-
-    .hero-box h1{
-      font-size:55px;
-      margin:0;
-      color:#ffd66b;
-    }
-
-    .hero-box p{
-      font-size:21px;
-      line-height:1.6;
-    }
+    .hero-box{max-width:650px;background:rgba(0,0,0,.25);padding:35px;border-radius:25px}
+    .hero-box h1{font-size:55px;margin:0;color:#ffd66b}
+    .hero-box p{font-size:21px;line-height:1.6}
 
     .btn{
-      display:inline-block;
-      margin:10px 8px 0 0;
-      padding:14px 22px;
-      border-radius:30px;
-      background:#ffd66b;
-      color:#214b35;
-      text-decoration:none;
-      font-weight:bold;
+      display:inline-block;margin:10px 8px 0 0;padding:14px 22px;
+      border-radius:30px;background:#ffd66b;color:#214b35;
+      text-decoration:none;font-weight:bold
     }
+    .btn.white{background:white}
 
-    .btn.white{
-      background:white;
-    }
+    section{padding:65px 8%}
+    .title{text-align:center;font-size:36px;color:#214b35;margin-bottom:35px}
 
-    section{
-      padding:65px 8%;
-    }
-
-    .title{
-      text-align:center;
-      font-size:36px;
-      color:#214b35;
-      margin-bottom:35px;
-    }
-
-    .about{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:30px;
-      align-items:center;
-    }
-
-    .about img{
-      width:100%;
-      border-radius:25px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    }
-
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .about img{width:100%;border-radius:25px;box-shadow:0 10px 25px rgba(0,0,0,.15)}
     .about-text{
-      background:white;
-      padding:30px;
-      border-radius:25px;
-      line-height:1.8;
-      box-shadow:0 8px 20px rgba(0,0,0,0.08);
-      font-size:18px;
+      background:white;padding:30px;border-radius:25px;line-height:1.8;
+      box-shadow:0 8px 20px rgba(0,0,0,.08);font-size:18px
     }
 
-    .menu-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:22px;
+    .menu-grid,.contact,.gallery{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px
     }
 
     .card{
-      background:white;
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
-      transition:0.3s;
+      background:white;border-radius:22px;overflow:hidden;
+      box-shadow:0 8px 20px rgba(0,0,0,.1);transition:.3s
     }
-
-    .card:hover{
-      transform:translateY(-6px);
-    }
-
-    .card img{
-      width:100%;
-      height:170px;
-      object-fit:cover;
-    }
-
-    .card-content{
-      padding:18px;
-    }
-
-    .card h3{
-      margin:0 0 8px;
-      color:#214b35;
-    }
-
-    .price{
-      color:#c88b25;
-      font-size:20px;
-      font-weight:bold;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:18px;
-    }
+    .card:hover{transform:translateY(-6px)}
+    .card img{width:100%;height:170px;object-fit:cover}
+    .card-content{padding:18px}
+    .card h3{margin:0 0 8px;color:#214b35}
+    .price{color:#c88b25;font-size:20px;font-weight:bold}
 
     .gallery img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      border-radius:20px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.12);
-    }
-
-    .contact{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:20px;
+      width:100%;height:220px;object-fit:cover;border-radius:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,.12)
     }
 
     .info{
-      background:#214b35;
-      color:white;
-      padding:25px;
-      border-radius:22px;
-      text-align:center;
+      background:#214b35;color:white;padding:25px;border-radius:22px;text-align:center
     }
-
-    .info h3{
-      color:#ffd66b;
-    }
+    .info h3{color:#ffd66b}
 
     iframe{
-      width:100%;
-      height:350px;
-      border:0;
-      border-radius:25px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+      width:100%;height:350px;border:0;border-radius:25px;
+      box-shadow:0 8px 20px rgba(0,0,0,.15)
     }
 
-    footer{
-      background:#214b35;
-      color:white;
-      text-align:center;
-      padding:25px;
-    }
+    footer{background:#214b35;color:white;text-align:center;padding:25px}
 
     .whatsapp{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      background:#25D366;
-      color:white;
-      padding:15px 20px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:bold;
-      box-shadow:0 8px 25px rgba(0,0,0,0.25);
+      position:fixed;right:20px;bottom:20px;background:#25D366;color:white;
+      padding:15px 20px;border-radius:50px;text-decoration:none;font-weight:bold;
+      box-shadow:0 8px 25px rgba(0,0,0,.25)
     }
 
     @media(max-width:750px){
-      nav{
-        flex-direction:column;
-        gap:12px;
-      }
-
-      nav a{
-        margin:5px;
-        font-size:14px;
-      }
-
-      .hero-box h1{
-        font-size:38px;
-      }
-
-      .about{
-        grid-template-columns:1fr;
-      }
+      nav{flex-direction:column;gap:12px}
+      nav a{margin:5px;font-size:14px}
+      .hero-box h1{font-size:38px}
+      .about{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -259,7 +105,7 @@
 <header class="hero" id="home">
   <div class="hero-box">
     <h1>Pidehane</h1>
-    <p>Adıyaman’da sıcak pide, lahmacun, pizza ve fırın lezzetleri.</p>
+    <p>Adıyaman Altınşehir’de sıcak pide, lahmacun, pizza ve fırın lezzetleri.</p>
     <a class="btn" href="tel:+905444970439">Hemen Ara</a>
     <a class="btn white" href="https://wa.me/905444970439" target="_blank">WhatsApp</a>
   </div>
@@ -275,37 +121,19 @@
     </div>
   </div>
 </section>
+
 <section>
   <h2 class="title">Neden Bizi Tercih Etmelisiniz?</h2>
-
   <div class="contact">
-
-    <div class="info">
-      <h3>Günlük Taze Ürünler</h3>
-      <p>Her gün taze hazırlanan ürünler.</p>
-    </div>
-
-    <div class="info">
-      <h3>Taş Fırın Lezzeti</h3>
-      <p>Geleneksel taş fırında pişirme.</p>
-    </div>
-
-    <div class="info">
-      <h3>Hızlı Servis</h3>
-      <p>Siparişleriniz kısa sürede hazırlanır.</p>
-    </div>
-
-    <div class="info">
-      <h3>Kaliteli Hizmet</h3>
-      <p>Müşteri memnuniyeti önceliğimizdir.</p>
-    </div>
-
+    <div class="info"><h3>Günlük Taze Ürünler</h3><p>Her gün taze hazırlanan ürünler.</p></div>
+    <div class="info"><h3>Taş Fırın Lezzeti</h3><p>Geleneksel taş fırında pişirme.</p></div>
+    <div class="info"><h3>Hızlı Servis</h3><p>Siparişleriniz kısa sürede hazırlanır.</p></div>
+    <div class="info"><h3>Kaliteli Hizmet</h3><p>Müşteri memnuniyeti önceliğimizdir.</p></div>
   </div>
 </section>
 
 <section id="menu">
   <h2 class="title">Menü</h2>
-
   <div class="menu-grid">
 
     <div class="card">
@@ -313,7 +141,7 @@
       <div class="card-content">
         <h3>Lahmacun</h3>
         <p>İnce hamur, özel iç harç.</p>
-        <span class="price"> 120 TL</span>
+        <span class="price">120 TL</span>
       </div>
     </div>
 
@@ -322,7 +150,7 @@
       <div class="card-content">
         <h3>Kaşarlı Pide</h3>
         <p>Bol kaşarlı sıcak pide.</p>
-        <span class="price"> 200 TL</span>
+        <span class="price">200 TL</span>
       </div>
     </div>
 
@@ -331,7 +159,7 @@
       <div class="card-content">
         <h3>Kavurmalı Pide</h3>
         <p>Lezzetli kavurma ile hazırlanır.</p>
-        <span class="price"> 300 TL</span>
+        <span class="price">300 TL</span>
       </div>
     </div>
 
@@ -349,7 +177,7 @@
       <div class="card-content">
         <h3>Karışık Pizza</h3>
         <p>Bol malzemeli pizza.</p>
-        <span class="price"> 400 TL</span>
+        <span class="price">400 TL</span>
       </div>
     </div>
 
@@ -358,7 +186,7 @@
       <div class="card-content">
         <h3>Çiğ Köfte</h3>
         <p>Servis tabağı ile.</p>
-        <span class="price"> 150 TL</span>
+        <span class="price">150 TL</span>
       </div>
     </div>
 
@@ -367,7 +195,7 @@
       <div class="card-content">
         <h3>Kızarmış Patates</h3>
         <p>Sıcak ve çıtır.</p>
-        <span class="price"> 80 TL</span>
+        <span class="price">80 TL</span>
       </div>
     </div>
 
@@ -376,7 +204,16 @@
       <div class="card-content">
         <h3>Kola</h3>
         <p>Soğuk içecek.</p>
-        <span class="price"> 20 TL</span>
+        <span class="price">20 TL</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/su.jpg">
+      <div class="card-content">
+        <h3>Su</h3>
+        <p>Soğuk içecek.</p>
+        <span class="price">10 TL</span>
       </div>
     </div>
 
@@ -397,7 +234,6 @@
 
 <section id="iletisim">
   <h2 class="title">İletişim</h2>
-
   <div class="contact">
     <div class="info">
       <h3>Telefon</h3>
@@ -406,19 +242,19 @@
 
     <div class="info">
       <h3>Adres</h3>
-      <p>Altınşehir, 3048. Sk. No:10E, Adıyaman Merkez</p>
+      <p>Altınşehir, 3048. Sk. No:10E, 02040 Adıyaman Merkez/Adıyaman</p>
     </div>
 
     <div class="info">
       <h3>Çalışma Saatleri</h3>
-      <p>10:00 - 22:00</p>
+      <p>08:00 - 22:00</p>
     </div>
   </div>
 </section>
 
 <section>
   <h2 class="title">Konum</h2>
-  <iframe src="https://www.google.com/maps?q=Pidehane%20Ad%C4%B1yaman&output=embed"></iframe>
+  <iframe src="https://www.google.com/maps?q=Pidehane%20Alt%C4%B1n%C5%9Fehir%203048.%20Sk.%20No%3A10E%20Ad%C4%B1yaman&output=embed"></iframe>
 </section>
 
 <footer>
